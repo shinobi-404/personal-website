@@ -1,273 +1,1679 @@
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Areebs Journey</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AreebVerse</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Inter:wght@700&family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for Power Grids -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Anime.js for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">Areebs Journey</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="Comingsoon.html">Experience/Projects</a>
-								<ul>
-									<li><a href="Comingsoon.html">NASA</a></li>
-									<li><a href="Comingsoon.html">Konnect</a></li>
-									<li><a href="Comingsoon.html">UCF</a></li>
-									<li>
-										<a href="Comingsoon.html">Projects</a>
-										<ul>
-											<li><a href="Comingsoon.html">Option 1</a></li>
-											<li><a href="Comingsoon.html">Option 2</a></li>
-											<li><a href="Comingsoon.html">Option 3</a></li>
-											<li><a href="Comingsoon.html">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<!-- <li><a href="elements.html">More About Me</a></li> -->
-							<li><a href="Comingsoon.html">More About Me</a></li>
-							<!-- <li><a href="#" class="button primary icon solid fa-download">Download Resume</a></li> -->
-							<!-- <p><button onclick="window.open('')"<a href="areebs_resume.pdf" download="areeb_resume.pdf" class="button primary icon solid fa-download">Download Resume</a></button></p> -->
-							<a href="PDF-Files/areebs_resume.pdf" download="areebs_resume.pdf" class="button primary icon solid fa-download">Download Resume</a>
+    <style>
+        /* --- COLOR PALETTE & DARK MODE --- */
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --secondary-text-color: #4b5563;
+            --panel-bg-color: #ffffff;
+            --border-color: #1f2937;
+            --shadow-color: #d1d5db;
+            --accent-color: #f87171; /* Red for light mode */
+            --accent-hover-color: #ef4444;
+            --text-shadow: 2px 2px 0px #d1d5db;
+            --grid-line-color: #d1d5db;
+            /* Light mode paper texture */
+            --paper-texture: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23d1d5db" fill-opacity="0.4" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+        }
 
-						</ul>
-					</nav>
-				</header>
+        html.dark {
+            --bg-color: #111827;
+            --text-color: #ffffff; 
+            --secondary-text-color: #d1d5db; 
+            --panel-bg-color: #1f2937;
+            --border-color: #f9fafb;
+            --shadow-color: #000000;
+            --accent-color: #9333ea; /* Purple for dark mode */
+            --accent-hover-color: #a855f7;
+            --text-shadow: 2px 2px 0px #000;
+            --grid-line-color: #4b5563;
+             /* Dark mode paper texture */
+            --paper-texture: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%234b5563" fill-opacity="0.4" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+        }
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>👋 Hello there! I'm Areeb</h2>
-							<p>I'm thrilled to welcome you to my corner of the internet.<br />
-								This website is more than just a digital space;
-								it's a glimpse into my passions, experiences, and the journey that has shaped who I am today.</p>
-						</header>
-						<span class="image"><img src="images/profile_pic.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+        /* --- END DARK MODE --- */
+        
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--paper-texture);
+            color: var(--text-color);
+            font-family: 'Comic Neue', cursive;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/Cat_pic01.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>Say Hello to Gojo🐾</h2>
-										<p>My Pawsitively Awesome Cat</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p> 🌙 Late one rainy night, as I was driving home, 
-										my headlights illuminated the dark road ahead, revealing a small, 
-										gray fur patch frozen in the middle of the gray asphalt, shrouded in darkness and barely visible 
-										in the feeble glow. Just days old, Gojo, as I later named him, cowered there amidst the rain, 
-										a fragile silhouette in the night. I hit the brakes to avoid a tragedy, my heart pounding as 
-										I scooped him up.</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>The next morning, I rushed him to the vet, where we learned he was only 2-3 days old. 
-										Through countless bottle-feeding sessions and sleepless nights, Gojo transformed from a vulnerable, 
-										shivering soul into the resilient and cherished companion he is today, a testament to the incredible bonds forged in the most unexpected moments.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+        @keyframes backgroundGlitchAnim {
+            0% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+            10% { clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%); }
+            20% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+            80% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+            90% { transform: translate(-5px, 2px); clip-path: polygon(0 15%, 100% 15%, 100% 20%, 0 20%); }
+            100% { transform: translate(0); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+        }
+        body.background-glitch {
+            animation: backgroundGlitchAnim 0.2s steps(4, end) forwards;
+        }
+        
+        html {
+            /* FIX: Changed from mandatory to proximity for better UX with longer content sections. */
+            scroll-snap-type: y proximity;
+            scroll-behavior: smooth;
+        }
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/NASA_Rocket_Launch01.png" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>My Journey to the Stars: NASA 🌟</h2>
-							<p> Models, Simulation, and Programming (Software Engineer) Internship</p>
-						</header>
-						<p>🚀 My journey to interning at NASA began with an inspiring encounter at NASA Day, where a conversation with a NASA engineer working in space simulations sparked a meaningful connection. That moment led to an interview and, soon after, the incredible opportunity to work on cutting-edge projects at NASA’s renowned facilities.
-							During my first internship, I developed internal Python tools to automate contractor workflows, improving efficiency and supporting critical operations. I was later invited back for a second internship, where I helped build virtual reality software for astronaut training and ground safety. One of my key contributions was designing a force solver used in preparation for the Artemis II and III missions.
-							These experiences were transformative — not only did I collaborate with brilliant engineers, but I also deepened my passion for space technology and reaffirmed my commitment to contributing to humanity’s journey to the stars.</p>
-						<ul class="actions">
-							<!-- <li><a href="left-sidebar.html" class="button">Learn More</a></li> -->
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+        .animate-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            /* This creates an invisible margin above each section, increasing the snap 'proximity' range */
+            scroll-margin-top: 15vh;
+        }
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/Icon_Konnect.png" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>My Path with Konnect: Innovation 💡</h2>
-							<p> A visionary local friend-making startup.</p>
-						</header>
-						<p>At Konnect, I’m part of a passionate team dedicated to a bold, mission-driven goal: helping one billion people make meaningful connections. Our vision is to transform the way people connect and bond, and we're committed to pioneering new paths for authentic relationships.
-							As a founding member, I’ve been instrumental in developing AI-driven matching algorithms, immersive virtual experiences, and innovative app features that foster real, lasting friendships. I’ve worked on building and maintaining the database infrastructure, collaborated with developers to create seamless internal tools, and trained team members on best practices for data management and system organization.
-							While we’ve already impacted thousands of lives, our mission is just beginning. With determination and a shared vision, we’re building a world where friendship knows no bounds.</p>
-						<ul class="actions">
-							<!-- <li><a href="#" class="button">Learn More</a></li> -->
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+        /* --- FONT HIERARCHY --- */
+        h1, h2, h3 {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 3px;
+            text-shadow: var(--text-shadow);
+        }
+        h4, h5, h6, .nav-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Programming Projects</h2>
-							<p>More coming soon, I am always in the process of making more and updating my projects</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Generic Skip List(Sorted Set) | Java</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<h4>Summer 2023</h4>
-									<ul>
-										<li>Balanced multi-level structure for efficient insertion, deletion, and search operations.</li>
-										<li>Implemented dynamic node height adjustment for optimization.</li>
-										<li>Conducted comprehensive testing on various dataset sizes and edge cases.</li>
-										<li>Successfully integrated Skip List into other algorithms and applications.</li>
-									</ul>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>GPS System | Java</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<h4>Summer 2023</h4>
-									<ul>
-										<li>Implemented Dijkstra's, Bellman-Ford, and Floyd-Warshall algorithms to compute optimal paths from a coordinate-based graph input file to construct diverse graphs for analysis.</li>
-										<li>Developed a tool to compare algorithms and input coordinates and build graphs.</li>
-										<li>Automated the creation of detailed output files, encompassing paths, distances, and performance metrics.</li>
-									  </ul>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>BioTree (Binary Search Tree) | C</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<h4>Spring 2023</h4>
-										<ul>
-											<li>Developed a nested binary search tree in C for custom classification, with for inserting, deleting, and searching nodes.</li>
-											<li>Tested the binary search tree using assert library with multiple test cases to ensure correct functionality.</li>
-											<li> Optimized tree performance with customized classification, preventing imbalance and enhancing efficiency</li>
-										</ul>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Vigenère Cipher | Python</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<h4>Fall 2022</h4>
-									<ul>
-										<li>Generates and displays a new file the alphabetic letters in a file using the Vigenère cipher.</li>
-										<li>Using two command line parameters the file with the encryption key and another plaintext file to be encrypted.</li>
-									</ul>
-								
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>School Management System | Java</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<h4>Fall 2022</h4>
-									<ul>
-										<li>Allows user to collect, store and display the data of students, faculty, and staff members.</li>
-										<li>The program can display tuition fees for students and assign the subject for instructors.</li>
-									  </ul>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Pokémon Capture System | C</h3>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p> -->
-									<ul>
-										<li>Organizes algorithms to determine the likelihood of capturing a Pokémon based off skill and region.</li>
-										<li>Designed algorithms to make run time more efficient.</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="https://github.com/shinobi-404" class="button primary">More Projects(Git-Hub)</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
+        .comic-panel {
+            border: 4px solid var(--border-color);
+            background-color: var(--panel-bg-color);
+            box-shadow: 8px 8px 0px var(--shadow-color);
+            transition: all 0.2s ease-in-out;
+            opacity: 0; 
+        }
+        
+        .comic-panel:not(.card-face):hover {
+             transform: translate(4px, 4px) scale(1.02);
+             box-shadow: 8px 8px 0px #9ca3af;
+        }
+        
+        .comic-button {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 1px;
+            border: 3px solid var(--border-color);
+            background-color: var(--accent-color);
+            color: var(--border-color);
+            box-shadow: 4px 4px 0px var(--border-color);
+            transition: all 0.2s ease-in-out;
+        }
+        .comic-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--border-color);
+            background-color: var(--accent-hover-color);
+        }
+        #dynamic-title .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+        .timeline-container {
+            position: relative;
+            width: 100%;
+            padding: 2rem 0;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box; /* FIX: Prevents padding from adding to width and causing overflow */
+        }
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--panel-bg-color);
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.right::after { left: -16px; }
+        .timeline-content {
+            padding: 1rem;
+            position: relative;
+        }
 
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<!-- <header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header> -->
-						<h2>More About Me🙂</h4>
-										<ul class="alt">
-											<li>I thrive on the adrenaline rush that comes with <strong>acrobatics and parkour</strong>.</li>
-											<li> <strong>Acting</strong> is my passion; it allows me to explore a myriad of emotions on stage. </li>
-											<li> <strong>Archery</strong> is a serene practice that demands precision and focus.</li>
-											<li> I'm constantly enthralled by the process of  <strong>learning new skills</strong> and expanding my horizons.</li>
-											<li><strong>Martial arts</strong> is not just about physical prowess; it's a path to self-discipline and personal growth that I deeply appreciate.</li>
-											<li><strong>Poetry</strong> is my outlet for expressing the depths of my thoughts and emotions in an artistic and profound way.</li>
-											<li><strong>Reading</strong> transports me to different worlds, and I savor each book as a new adventure.</li>
-											<li><strong>Rock climbing</strong> fuels my spirit of adventure as I conquer nature's challenges, one ascent at a time.</li>
-											<li><strong>Yoga</strong> is my sanctuary, providing inner peace and harmony in a fast-paced world.</li>
-											<li>Exploring new cuisines and dining experiences while <strong>going out to eat</strong> is a delightful way for me to indulge in culinary adventures and social gatherings.</li>
-										</ul>
-						<!-- <form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form> -->
-					</div>
-				</section>
+        /* --- Responsive Timeline for Mobile --- */
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item.left, .timeline-item.right {
+                left: 0;
+            }
+            .timeline-item.right::after {
+                left: 15px;
+            }
+            .timeline-item::after {
+                left: 15px;
+                right: auto;
+            }
+        }
+        
+        header {
+            background-color: var(--panel-bg-color);
+            border-bottom: 4px solid var(--border-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        nav {
+            position: relative;
+        }
+        .nav-link .letter {
+            display: inline-block;
+            position: relative;
+        }
+        .secondary-text {
+            color: var(--secondary-text-color);
+        }
+        #loading-screen {
+            background-color: var(--bg-color);
+            /* Use a different texture for loading to make it feel distinct */
+            background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23d1d5db" fill-opacity="0.4" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+            transition: opacity 0.5s ease-out;
+        }
+        .loader {
+            border: 8px solid var(--shadow-color);
+            border-top: 8px solid var(--accent-color);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #original-bio .char { 
+            display: inline-block;
+            transition: transform 0.3s ease-out;
+        }
+        #modal-close-button {
+            background-color: var(--secondary-text-color);
+            color: var(--bg-color);
+        }
+        #modal-close-button:hover {
+            background-color: #ef4444;
+            color: #ffffff;
+        }
+        .card-container {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-back { transform: rotateY(180deg); }
+        .card-face { opacity: 1; }
+        .github-icon-link:hover { color: #1f2937; }
+        html.dark .github-icon-link:hover { color: #ffffff; }
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-						<li><a href="https://www.linkedin.com/in/areeb-y-2aa658152/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<li><a href="https://github.com/shinobi-404" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<!-- <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li> -->
-						<li><a href="mailto:areebyousuf2@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+        /* --- Interactive Skillset Styles --- */
+        .filter-button {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 1px;
+            border: 3px solid var(--border-color);
+            background-color: var(--panel-bg-color);
+            color: var(--text-color);
+            box-shadow: 4px 4px 0px var(--shadow-color);
+            transition: all 0.2s ease-in-out;
+        }
+        .filter-button.active, .filter-button:hover {
+            background-color: var(--accent-color);
+            color: var(--panel-bg-color);
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--border-color);
+        }
+        .skill-item {
+            background-color: #f9fafb;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            font-family: 'VT323', monospace;
+            cursor: pointer;
+        }
+        html.dark .skill-item {
+            background-color: #374151;
+            border-color: #4b5563;
+        }
+         .skill-item.selected-non-tech {
+            border-color: #ef4444; /* Red */
+            background-color: #fee2e2;
+        }
+        html.dark .skill-item.selected-non-tech {
+            background-color: #7f1d1d; /* Dark Red */
+            border-color: #ef4444;   /* Bright Red */
+        }
+        .skill-item.selected-tech {
+            border-color: #3b82f6; /* Blue */
+            background-color: #dbeafe;
+        }
+         html.dark .skill-item.selected-tech {
+            background-color: #1e40af;
+            border-color: #60a5fa;
+        }
+        .pip-container { display: flex; gap: 2px; }
+        .pip { flex-grow: 1; height: 8px; background-color: #e5e7eb; border: 1px solid #d1d5db; }
+        .pip.filled { background-color: var(--accent-color); }
+        html.dark .pip { background-color: #4b5563; border-color: #6b7280; }
+        html.dark .pip.filled { background-color: var(--accent-color); }
 
-		</div>
+        /* Draggable skill list */
+        #skill-index-grid {
+            resize: vertical;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        #skill-tooltip {
+            position: absolute;
+            background-color: var(--panel-bg-color);
+            border: 2px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            box-shadow: 4px 4px 0px var(--shadow-color);
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            max-width: 250px;
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+        }
 
-	</body>
+        /* --- Verse Glitch Styles --- */
+        #glitch-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 120, 87, 0.2); /* Green tint */
+            pointer-events: none;
+            z-index: 9990;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        #glitch-overlay.active {
+            opacity: 1;
+        }
+
+        #glitch-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 4px);
+            animation: scanlines 0.2s linear infinite;
+        }
+
+        #crack-canvas, #digital-rain-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9991;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        #crack-canvas.active, #digital-rain-canvas.active {
+            opacity: 1;
+        }
+        
+        @keyframes scanlines {
+            from { background-position: 0 0; }
+            to { background-position: 0 100%; }
+        }
+
+        .comic-panel.shatterable {
+            cursor: crosshair;
+        }
+        .comic-panel.shattered {
+            pointer-events: none !important;
+        }
+
+        .shard {
+            position: absolute;
+            background-color: rgba(127, 255, 170, 0.7);
+            filter: drop-shadow(0 0 5px rgba(127, 255, 170, 0.8));
+        }
+
+        /* --- Comic FX Styles --- */
+        #comic-fx-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px; /* Container size */
+            height: 300px;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%) scale(0); /* Initial state: centered on click, scaled down */
+            opacity: 0;
+        }
+
+        #comic-fx-burst {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, #f59e0b 20%, transparent 21%),
+                        radial-gradient(circle, #f59e0b 20%, transparent 21%),
+                        radial-gradient(circle, #ef4444 35%, transparent 36%);
+            background-size: 10px 10px, 10px 10px, 100% 100%; /* Dots and main burst */
+            background-position: 0 0, 5px 5px, center center;
+            background-repeat: round, round, no-repeat;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        #comic-fx-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Bangers', cursive;
+            font-size: 5rem; /* Adjusted for container */
+            color: #ffeb3b; /* Bright Yellow */
+            text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 5px 5px 0 #ef4444; /* Black outline, Red shadow */
+            white-space: nowrap;
+        }
+
+        /* --- Top Secret File Modal Styles --- */
+        .secret-file-modal-content {
+            background-color: #fef3c7; /* Manila folder color */
+            color: #1f2937;
+            font-family: 'VT323', monospace;
+            border: 2px solid #ca8a04;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .file-tab {
+            background-color: #fde68a;
+            padding: 2px 12px;
+            border-bottom: 2px solid #ca8a04;
+            border-right: 2px solid #ca8a04;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+        .top-secret-stamp {
+            font-family: 'Bangers', cursive;
+            color: #dc2626;
+            border: 4px solid #dc2626;
+            padding: 0.25rem 1rem;
+            transform: rotate(-10deg);
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            position: absolute;
+            right: 20px;
+            top: 40px;
+        }
+        .file-section-header {
+            background-color: #e5e7eb;
+            color: #111827;
+            padding: 2px 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .file-content p {
+            margin-bottom: 0.75rem;
+        }
+        .file-content strong {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* --- New Feature Styles --- */
+        .section-divider {
+            padding: 3rem 1rem;
+            text-align: center;
+            overflow: hidden; /* Hide the box until it animates */
+        }
+
+        .narration-box {
+            display: inline-block;
+            background-color: #fef9c3; /* Yellowish paper */
+            color: #1f2937;
+            border: 3px solid #1f2937;
+            padding: 0.5rem 1.5rem;
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+            font-size: 2rem;
+            transform: scaleX(0); /* Initially hidden */
+        }
+        
+        /* --- Evidence Board Styles --- */
+        .evidence-board-panel {
+            /* Corkboard texture by Steve Schoger */
+            background-color: #d29d6a;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239e7146' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .evidence-board-grid {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem; /* Reduced gap for better fit */
+            padding: 2rem;
+        }
+
+        #red-strings-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        #red-strings-svg line {
+            stroke: #ef4444;
+            stroke-width: 2px;
+            stroke-dasharray: 4;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+        }
+
+        .case-file {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .polaroid {
+            background: #fff;
+            padding: 1rem;
+            padding-bottom: 5rem;
+            border: 1px solid #ccc;
+            box-shadow: 5px 5px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .case-file:nth-child(1) .polaroid { transform: rotate(-8deg); }
+        .case-file:nth-child(2) .polaroid { transform: rotate(5deg); }
+        .case-file:nth-child(3) .polaroid { transform: rotate(10deg); }
+        .case-file:nth-child(4) .polaroid { transform: rotate(-3deg); }
+
+        .polaroid img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .polaroid figcaption {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            text-align: center;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .case-file:hover .polaroid {
+            transform: scale(1.1) rotate(0deg) !important;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+        
+        .pinned-note {
+            background: #fffbe9; /* Creamy paper */
+            padding: 1.5rem;
+            padding-top: 2.5rem;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+            font-family: 'VT323', monospace;
+            color: #374151; /* Dark gray for text */
+            position: relative;
+            width: 220px; 
+            transform: rotate(3deg); 
+            z-index: 1;
+            border: 1px solid #e2e8f0;
+        }
+
+        .pinned-note::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #ef4444; /* Red pin head */
+            border-radius: 50%;
+            border: 2px solid #a12c2c; /* Darker red border */
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .pinned-note h4 {
+            font-family: 'Bangers', cursive;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .pinned-note ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .pinned-note li {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #d1d5db;
+            padding-bottom: 0.5rem;
+        }
+
+
+        .case-file:hover + #red-strings-svg line, /* This is tricky, JS will handle highlighting */
+        .case-file.highlight-string line {
+            stroke-width: 4px;
+            stroke: #f87171;
+            filter: drop-shadow(0 0 5px #f87171);
+        }
+
+        #cursor-light {
+            opacity: 1;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: -2.5rem;
+            left: -2rem;
+            width: auto;
+            white-space: nowrap;
+            background: var(--panel-bg-color);
+            border: 3px solid var(--border-color);
+            border-radius: .4em;
+            padding: 1rem;
+            z-index: 5;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 3rem;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid var(--border-color);
+        }
+        
+        #gojo-link {
+            text-decoration: underline;
+            cursor: pointer;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="cursor-light"></div>
+    <div id="skill-tooltip"></div>
+
+    <div id="loading-screen" class="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50">
+        <div class="loader"></div>
+        <h1 class="text-5xl mt-8">Loading...</h1>
+    </div>
+
+    <header class="sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="relative">
+                <a href="#home" id="your-name" class="text-4xl font-bold nav-link relative z-10 glitched-text">AreebVerse</a>
+            </div>
+            <div class="hidden md:flex flex-nowrap items-center space-x-2 lg:space-x-3 relative z-10">
+                <a href="#about" class="text-lg nav-link transition-colors glitched-text">Origin</a>
+                <a href="#skills" class="text-lg nav-link transition-colors glitched-text">Powers</a>
+                <a href="#timeline" class="text-lg nav-link transition-colors glitched-text">Journey</a>
+                <a href="#portfolio" class="text-lg nav-link transition-colors glitched-text">Missions</a>
+                <a href="#hobbies" class="text-lg nav-link transition-colors glitched-text">Side Quests</a>
+                <a href="#contact" class="text-lg nav-link transition-colors glitched-text">Next Issue?</a>
+                <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full focus:outline-none">
+                    <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 7.072l.707-.707a1 1 0 10-1.414-1.414l-.707.707a1 1 0 001.414 1.414zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-3xl">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-xl nav-link glitched-text">Origin</a>
+            <a href="#skills" class="block py-2 text-xl nav-link glitched-text">Powers</a>
+            <a href="#timeline" class="block py-2 text-xl nav-link glitched-text">Journey</a>
+            <a href="#portfolio" class="block py-2 text-xl nav-link glitched-text">Missions</a>
+            <a href="#hobbies" class="block py-2 text-xl nav-link glitched-text">Side Quests</a>
+            <a href="#contact" class="block py-2 text-xl nav-link glitched-text">Next Issue?</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="home" class="text-center animate-section">
+            <h2 class="text-4xl md:text-5xl mb-4 glitched-text">Areeb The Amazing...</h2>
+            <div class="comic-panel p-4">
+                <h1 id="dynamic-title" class="text-5xl md:text-7xl mb-4 h-24 flex items-center justify-center whitespace-nowrap"></h1>
+                <img id="light-mode-hero" src="https://placehold.co/1200x800/e0242c/ffffff?text=Your+Classic+Hero+Art" alt="Areeb in a classic heroic pose during the day" class="mx-auto w-full max-w-4xl rounded">
+                <img id="dark-mode-hero" src="/Images/Digital_Horizon.png" alt="Areeb in a stealthy, dark-mode pose at night" class="mx-auto w-full max-w-4xl rounded">
+                <p class="text-xl mt-4 max-w-2xl mx-auto">Thanks for visiting! May your life be a grand adventure, as I aim to make mine.</p>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="narration-box">Meanwhile...</div>
+        </div>
+
+        <section id="about" class="animate-section">
+            <div class="w-full max-w-5xl mx-auto">
+                <h2 class="text-5xl text-center mb-8 glitched-text">WHO AM I?</h2>
+                <div class="comic-panel p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+                            <img src="/Images/Pro_pic2.11.JPG" alt="A sketch of you" class="w-full h-full object-cover" style="border: 4px solid var(--border-color); border-radius: 50%;">
+                            <div class="speech-bubble">
+                                <p class="text-center text-lg italic">"Build with purpose, inspire others!"</p>
+                            </div>
+                        </div>
+                        <div class="text-lg">
+                            <h3 class="text-4xl mb-2 glitched-text">Every Hero Has An Origin Story...</h3>
+                            <p class="text-sm secondary-text italic my-2">(Pst! Move your mouse over the text below for a special effect. And whatever you do, DON'T click that button.)</p>
+                            <div id="original-bio" class="space-y-4">
+                               <p>And this is mine. I’m Areeb Yousuf — a software engineer, entrepreneur, and student at the University of Central Florida (UCF) who has teamed up with giants like NASA and Nike.</p>
+                               <p>Fueled by a mission to build technology that makes a real impact, it's about more than just solving problems for me; it’s about creating moments that matter. With a growth mindset as my superpower, I’m always learning, mentoring, and helping others rise.</p>
+                               <p>Beyond the screen, I’m an adventurer at heart — chasing skydives, scuba dives, and the next frontier of possibility. My quest is simple: build with purpose, inspire others, and expand what humanity can achieve.</p>
+                            </div>
+                            <div class="mt-6">
+                                <button id="view-secret-file-button" class="comic-button text-xl px-4 py-2">View Top Secret File</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="narration-box">With great power...</div>
+        </div>
+
+        <section id="skills" class="animate-section">
+            <div class="w-full max-w-6xl mx-auto">
+                <h2 class="text-5xl text-center mb-8 glitched-text">MY SKILLSET</h2>
+                <div class="comic-panel p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                        <div class="text-center"><h3 class="text-4xl mb-4 glitched-text">Non-Technical Powers</h3><canvas id="nonTechnicalSkillChart"></canvas></div>
+                        <div class="text-center"><h3 class="text-4xl mb-4 glitched-text">Technical Powers</h3><canvas id="technicalSkillChart"></canvas></div>
+                    </div>
+                    <div class="border-t-4 border-dashed" style="border-color: var(--shadow-color); margin-top: 1rem; padding-top: 1rem;">
+                        <h3 class="text-3xl text-center mb-2 glitched-text">Complete Power Grid</h3>
+                        <p class="text-center text-sm secondary-text mb-4">(Note: Not to scale. Click to add. Drag to expand.)</p>
+                        <div class="flex justify-center flex-wrap gap-2 mb-6">
+                            <button class="filter-button active px-4 py-2 text-lg" data-filter="all">All</button>
+                            <button class="filter-button px-4 py-2 text-lg" data-filter="non-technical">Non-Technical</button>
+                            <button class="filter-button px-4 py-2 text-lg" data-filter="technical">Technical</button>
+                        </div>
+                        <div id="skill-index-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 h-64 overflow-y-auto p-2" style="background: rgba(0,0,0,0.05); border-radius: 8px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+             <div class="narration-box">The plot thickens...</div>
+        </div>
+
+        <section id="timeline" class="animate-section overflow-y-auto">
+            <h2 class="text-5xl text-center mb-4 glitched-text">MY JOURNEY</h2>
+            <p class="text-center secondary-text text-lg mb-4">Click on a card to see the comic!</p>
+            <div class="timeline-container">
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\Gojo_ComicPanel.png"><h3 class="text-3xl glitched-text">Furry Sidekick: Gojo</h3><p>Rescued a clever cat named <span id="gojo-link">Gojo</span>, who became my loyal companion.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="https://placehold.co/800x1200/e2e8f0/1f2937?text=Journey+UCF"><h3 class="text-3xl glitched-text">University of Central Florida (UCF)</h3><p>Declared a Computer Science major.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\STIR_Labs_ComicPanel.png"><h3 class="text-3xl glitched-text">STIR Labs</h3><p>Joined the Socio-Technical Interaction Research (STIR) Lab to assist with research on Instagram algorithms for adolescent safety.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="Images\Comics\Konnect_ComicPanel.png"><h3 class="text-3xl glitched-text">Konnect</h3><p>Joined a startup focused on helping people make friends.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="https://placehold.co/800x1200/e2e8f0/1f2937?text=Mentoring"><h3 class="text-3xl glitched-text">Started Mentoring</h3><p>Began guiding and supporting peers, helping them navigate academic, professional, and personal growth opportunities, while encouraging involvement in volunteering and leadership roles.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\FE_ComicPanel.png"><h3 class="text-3xl glitched-text">Passing the Foundation Exam</h3><p>Completed the mandatory exam required for all Computer Science students to continue toward graduation.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="https://placehold.co/800x1200/e2e8f0/1f2937?text=NASA+Part+1"><h3 class="text-3xl glitched-text">NASA pt1</h3><p>Contributed to the Artemis II & III missions.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="Images\Comics\ShellHacks_ComicPanel.png"><h3 class="text-3xl glitched-text">ShellHacks</h3><p>Attended my first hackathon—the largest in Florida—and worked on a smart mobility cane called AR-botics.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="https://placehold.co/800x1200/e2e8f0/1f2937?text=NASA+Part+2"><h3 class="text-3xl glitched-text">NASA pt2</h3><p>Continued contributions to the Artemis II & III missions.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="https://placehold.co/800x1200/e2e8f0/1f2937?text=Mentorship"><h3 class="text-3xl glitched-text">Mentorship & Community Engagement</h3><p>Continued mentoring peers, volunteered in community initiatives, and became active in clubs such as SHPE, NSBE, SWE, and AI@UCF. Provided guidance and support to help others grow academically, professionally, and personally.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\CyberCert_ComicPanel.png"><h3 class="text-3xl glitched-text">Cybersecurity Certification</h3><p>Earned a Cybersecurity certification through TestOut.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\TauBetaPi_ComicPanel.png"><h3 class="text-3xl glitched-text">Tau Beta Pi</h3><p>Invited to join the national engineering honor society for academic excellence.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content comic-panel cursor-pointer" data-image="/Images\Comics\Nike_ComicPanel.png"><h3 class="text-3xl glitched-text">Nike</h3><p>Worked in Global Tech developing AI tools.</p></div></div>
+            </div>
+        </section>
+        
+        <div class="section-divider">
+            <div class="narration-box">To the next adventure!</div>
+        </div>
+
+        <section id="portfolio" class="animate-section">
+            <div class="w-full max-w-6xl mx-auto">
+                <h2 class="text-5xl text-center mb-8 glitched-text">MY WORK</h2>
+                <p class="text-center secondary-text text-lg mb-4">Click a card to flip for more details!</p>
+                <div class="grid grid-cols-1 md-grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-container h-96"><div class="card-inner"><div class="card-face comic-panel"><img src="/Images/platformer.png" alt="Portfolio Project 1" class="w-full h-48 object-cover border-b-4 border-gray-800"><div class="p-4 flex-grow flex flex-col justify-center"><h3 class="text-3xl mb-2 glitched-text">Platformer Game</h3><p>Built a PyGame platformer with custom levels and character mechanics.</p></div></div><div class="card-face card-back comic-panel p-4 flex flex-col justify-center text-center"><h4 class="text-2xl mb-2">Game Time</h4><p class="text-sm"><strong>Challenge:</strong> The world needed more fun!<br><strong>Mission:</strong> To design and build an engaging platformer with unique levels, dynamic character movement, and satisfying game feel for players.</p></div></div></div>
+                    <div class="card-container h-96"><div class="card-inner"><div class="card-face comic-panel"><img src="/Images/parkpal.png" alt="Portfolio Project 2" class="w-full h-48 object-cover border-b-4 border-gray-800"><div class="p-4 flex-grow flex flex-col justify-center"><h3 class="text-3xl mb-2 glitched-text">ParkPal</h3><p>Full-stack app helping users check wait times and plan trips for theme parks worldwide.</p></div></div><div class="card-face card-back comic-panel p-4 flex flex-col justify-center text-center"><h4 class="text-2xl mb-2">Find Your Thrill</h4><p class="text-sm"><strong>Challenge:</strong> Long lines and chaotic park days!<br><strong>Mission:</strong> Develop a full-stack web and mobile app using the MERN stack to provide real-time wait times and trip planning tools for theme park goers.</p></div></div></div>
+                    <div class="card-container h-96"><div class="card-inner"><div class="card-face comic-panel"><img src="/Images/batphone.png" alt="Portfolio Project 3" class="w-full h-48 object-cover border-b-4 border-gray-800"><div class="p-4 flex-grow flex flex-col justify-center"><h3 class="text-3xl mb-2 glitched-text">Batphone</h3><p>Full-stack interactive crime-fighting contact manager for heroes and vigilant users.</p></div></div><div class="card-face card-back comic-panel p-4 flex flex-col justify-center text-center"><h4 class="text-2xl mb-2">When Trouble Calls</h4><p class="text-sm"><strong>Challenge:</strong> The city's communication lines were in chaos!<br><strong>Mission:</strong> Create a secure, reliable contact manager with Node.js to coordinate hero activity and bring order to the night.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="narration-box">But that's not all...</div>
+        </div>
+        
+        <section id="hobbies" class="animate-section">
+            <div class="w-full max-w-5xl mx-auto">
+                <h2 class="text-5xl text-center mb-8 glitched-text">SIDE QUESTS & FIELD NOTES</h2>
+                
+                <div class="comic-panel evidence-board-panel p-0 md:p-0">
+                    <div class="evidence-board-grid">
+                        <svg id="red-strings-svg"></svg>
+                        <div class="pinned-note">
+                            <h4>HOBBY LOG</h4>
+                            <ul>
+                                <li>Skydiving 🪂</li>
+                                <li>Stage Acting 🎭</li>
+                                <li>Cat Rescuing 🐱</li>
+                                <li>Food Hunting 🍜</li>
+                            </ul>
+                        </div>
+                        <div class="case-file" data-note="note-1">
+                            <figure class="polaroid">
+                                <img src="https://placehold.co/400x400/3498db/ffffff?text=Skydiving" alt="Skydiving photo">
+                                <figcaption>Mission: Master the Skies</figcaption>
+                            </figure>
+                        </div>
+                        <div class="case-file" data-note="note-2">
+                            <figure class="polaroid">
+                                <img src="https://placehold.co/400x400/9b59b6/ffffff?text=Stage" alt="On stage photo">
+                                <figcaption>Quest: The Thespian</figcaption>
+                            </figure>
+                        </div>
+                        <div class="case-file" data-note="note-3">
+                            <figure class="polaroid">
+                                <img src="https://placehold.co/400x400/e74c3c/ffffff?text=Gojo" alt="Photo of Gojo the cat">
+                                <figcaption>Objective: Recruit a Sidekick</figcaption>
+                            </figure>
+                        </div>
+                         <div class="case-file" data-note="note-4">
+                            <figure class="polaroid">
+                                <img src="https://placehold.co/400x400/f1c40f/ffffff?text=Food" alt="Photo of delicious food">
+                                <figcaption>Bounty: Culinary Chronicles</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="glitch-panel-container" class="relative mt-12">
+                    <div class="comic-panel p-6 md:p-8">
+                        <h3 class="text-4xl text-center mb-4">Just For Fun...</h3>
+                        <div class="text-center">
+                            <button id="glitch-button" class="comic-button text-xl px-4 py-2">Enter the Verse</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="contact" class="animate-section">
+            <div class="w-full max-w-4xl mx-auto text-center">
+                 <div class="comic-panel p-8">
+                     <img src="https://placehold.co/1200x600/1f2937/ffffff?text=Your+Epic+Ending+Art" alt="Epic final art piece" class="w-full rounded mb-6 border-4" style="border-color: var(--border-color)">
+                     <h2 class="text-6xl md:text-8xl glitched-text">THE END...?</h2>
+                     <p class="text-2xl my-4" style="font-family: 'Bangers', cursive; letter-spacing: 1px;">Thanks for stopping by!</p>
+                     <p class="text-lg secondary-text mb-6">Let's connect for the next adventure.</p>
+                      <div class="flex justify-center items-center space-x-8">
+                          <a id="linkedin-link" href="https://www.linkedin.com/in/areeb-y-2aa658152/" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-transform duration-200 hover:scale-110"><svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                          <a id="github-link" href="https://github.com/shinobi-404" target="_blank" title="GitHub" aria-label="GitHub Profile" class="text-gray-500 dark:text-gray-400 transition-transform duration-200 hover:scale-110 github-icon-link"><svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
+                          <a id="email-link" href="mailto:areebyousuf2@gmail.com" title="Email" aria-label="Email Me" class="text-gray-400 hover:text-red-400 transition-transform duration-200 hover:scale-110"><svg class="w-14 h-14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg></a>
+                      </div>
+                 </div>
+            </div>
+        </section>
+
+        <div id="timeline-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div class="bg-white p-4 border-4 border-black max-w-3xl max-h-[90vh] relative comic-panel opacity-100">
+                <button id="modal-close-button" class="absolute -top-5 -right-5 text-5xl font-bold border-4 border-black rounded-full w-12 h-12 flex items-center justify-center leading-none z-10 transition-all duration-200 hover:scale-110">&times;</button>
+                <img id="modal-image" src="" alt="Timeline Comic Art" class="w-full h-full object-contain max-h-[80vh]">
+            </div>
+        </div>
+
+        <div id="secret-file-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+            <div class="secret-file-modal-content w-full m-4 relative">
+                <button id="secret-file-close-button" class="absolute -top-4 -right-4 bg-red-600 text-white rounded-full w-10 h-10 text-3xl font-bold flex items-center justify-center leading-none z-10 hover:bg-red-700 transition-colors">&times;</button>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="file-tab">YOUSUF, AREEB</div>
+                            <h2 class="text-3xl font-bold my-2 text-gray-800" style="font-family:'Bangers', cursive;">SUBJECT PROFILE</h2>
+                        </div>
+                        <div class="top-secret-stamp">TOP SECRET</div>
+                    </div>
+
+                    <div class="mt-4 border-t-2 border-gray-400 pt-4 text-xl space-y-4">
+                        <div class="file-section">
+                            <h4 class="file-section-header">Hero File</h4>
+                            <div class="file-content grid grid-cols-2 gap-x-4">
+                                <p><strong>Alias:</strong> The Innovator</p>
+                                <p><strong>Base:</strong> Univ. of Central Florida</p>
+                                <p><strong>Affiliations:</strong> NASA, Nike, STIR Labs</p>
+                                <p><strong>Primary Power:</strong> Growth Mindset</p>
+                            </div>
+                        </div>
+                        <div class="file-section">
+                            <h4 class="file-section-header">Threat Assessment</h4>
+                            <div class="file-content">
+                                <p><strong>Status:</strong> Low Threat. Subject is a builder, not a destroyer. Primary motivation appears to be positive global impact through technology. Pushes boundaries of what is considered possible.</p>
+                            </div>
+                        </div>
+                         <div class="file-section">
+                            <h4 class="file-section-header">Logged Sightings</h4>
+                            <div class="file-content">
+                                <p>Subject has been observed engaging in high-risk recreational activities, including but not limited to: <strong>skydiving, scuba diving, and exploring dramatic arts.</strong> Suggests a personality that thrives on adventure and creativity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gojo-secret-file-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+            <div class="secret-file-modal-content w-full m-4 relative">
+                <button id="gojo-secret-file-close-button" class="absolute -top-4 -right-4 bg-red-600 text-white rounded-full w-10 h-10 text-3xl font-bold flex items-center justify-center leading-none z-10 hover:bg-red-700 transition-colors">&times;</button>
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="file-tab">SUBJECT: GOJO</div>
+                            <h2 class="text-3xl font-bold my-2 text-gray-800" style="font-family:'Bangers', cursive;">SIDEKICK PROFILE</h2>
+                        </div>
+                        <div class="top-secret-stamp" style="color: #3b82f6; border-color: #3b82f6;">CLASSIFIED</div>
+                    </div>
+
+                    <div class="mt-4 border-t-2 border-gray-400 pt-4 text-xl space-y-4">
+                         <img src="https://placehold.co/400x300/e2e8f0/1f2937?text=Gojo+Photo" alt="A photo of Gojo the cat" class="mx-auto my-2 border-2 border-gray-500">
+                        <div class="file-section">
+                            <h4 class="file-section-header">Asset Analysis</h4>
+                            <div class="file-content grid grid-cols-2 gap-x-4">
+                                <p><strong>Codename:</strong> Gojo</p>
+                                <p><strong>Species:</strong> Feline, Domestic</p>
+                                <p><strong>Primary Role:</strong> Morale Officer</p>
+                                <p><strong>Affiliation:</strong> Areeb Yousuf</p>
+                            </div>
+                        </div>
+                        <div class="file-section">
+                            <h4 class="file-section-header">Known Abilities</h4>
+                            <div class="file-content">
+                                <p><strong>Stealth:</strong> Exceptional. Can appear and disappear at will, especially near feeding times.<br><strong>Sonic Attack:</strong> Emits a high-frequency "Purr" capable of de-stressing targets.<br><strong>Master of Naps:</strong> Can recharge energy reserves at an unprecedented rate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="glitch-overlay"></div>
+        <canvas id="crack-canvas"></canvas>
+        <div id="shard-container" class="fixed inset-0 pointer-events-none z-[9992]"></div>
+        <div id="comic-fx-container">
+            <div id="comic-fx-burst"></div>
+            <div id="comic-fx-text"></div>
+        </div>
+    </main>
+
+    <footer class="text-center p-4 text-sm secondary-text font-sans">
+        &copy; 2025 All Rights Reserved by Areeb Yousuf
+    </footer>
+
+    <script>
+        // --- Loading Screen Logic ---
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingFlashInterval = setInterval(() => {
+            document.documentElement.classList.toggle('dark', Math.random() > 0.5);
+        }, 400);
+
+        window.onload = () => {
+            // Re-added the 3-second delay as requested for dramatic effect.
+            setTimeout(() => {
+                clearInterval(loadingFlashInterval);
+                anime({
+                    targets: loadingScreen,
+                    opacity: 0,
+                    duration: 500,
+                    easing: 'easeInOutQuad',
+                    complete: () => {
+                        loadingScreen.style.display = 'none';
+                        initPortfolio();
+                    }
+                });
+            }, 3000);
+        };
+
+        // --- Refactored Initialization ---
+        function initPortfolio() {
+            let chartInstances = {
+                nonTechnical: null,
+                technical: null
+            };
+
+            function createCharts() {
+                if (chartInstances.nonTechnical) chartInstances.nonTechnical.destroy();
+                if (chartInstances.technical) chartInstances.technical.destroy();
+                
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                const options = { scales: { r: { angleLines: { color: isDarkMode ? '#4b5563' : '#d1d5db' }, grid: { color: isDarkMode ? '#4b5563' : '#d1d5db' }, pointLabels: { font: { size: 14, family: "'Comic Neue', cursive", weight: 'bold' }, color: isDarkMode ? '#ffffff' : '#1f2937' }, ticks: { backdropColor: isDarkMode ? 'rgba(31,41,55,0.75)' : 'rgba(255,255,255,0.75)', stepSize: 20, color: isDarkMode ? '#d1d5db' : '#4b5563' }, suggestedMin: 0, suggestedMax: 100 } }, plugins: { legend: { display: false } } };
+                chartInstances.nonTechnical = new Chart(document.getElementById('nonTechnicalSkillChart'), { type: 'radar', data: { labels: ['Creativity', 'Problem-Solving', 'Innovation', 'Story telling', 'Mentorship'], datasets: [{ data: [100, 95, 95, 95, 95], backgroundColor: 'rgba(248, 113, 113, 0.4)', borderColor: '#ef4444', borderWidth: 3, pointBackgroundColor: '#ef4444' }] }, options: options });
+                chartInstances.technical = new Chart(document.getElementById('technicalSkillChart'), { type: 'radar', data: { labels: ['AI/ML', 'Data Structures & Algorithms', 'Web/Mobile App Development', 'Git', 'API Design'], datasets: [{ data: [90, 95, 90, 95, 90], backgroundColor: 'rgba(59, 130, 246, 0.4)', borderColor: '#3b82f6', borderWidth: 3, pointBackgroundColor: '#3b82f6' }] }, options: options });
+            }
+
+            setupNavigation(createCharts);
+            setupAnimations();
+            setupModals();
+            setupSkillset(createCharts, chartInstances);
+            setupVerseGlitch();
+            setupBackgroundEffects();
+        }
+
+        // --- SETUP FUNCTIONS ---
+
+        function setupNavigation(createChartsFunc) {
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+            // Dark Mode
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            let savedTheme = localStorage.getItem('theme') || 'light';
+            
+            function applyTheme(theme) {
+                const isDark = theme === 'dark';
+                document.documentElement.classList.toggle('dark', isDark);
+                document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden', !isDark);
+                document.getElementById('theme-toggle-light-icon').classList.toggle('hidden', isDark);
+
+                // FIX: Explicitly toggle hero images with JavaScript to ensure reliability
+                const lightHero = document.getElementById('light-mode-hero');
+                const darkHero = document.getElementById('dark-mode-hero');
+                if (lightHero && darkHero) {
+                    if (isDark) {
+                        lightHero.style.display = 'none';
+                        darkHero.style.display = 'block';
+                    } else {
+                        lightHero.style.display = 'block';
+                        darkHero.style.display = 'none';
+                    }
+                }
+            }
+            applyTheme(savedTheme);
+
+            themeToggleBtn.addEventListener('click', () => {
+                savedTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', savedTheme);
+                applyTheme(savedTheme);
+                setTimeout(createChartsFunc, 300); 
+            });
+
+            // Nav Link Animations
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navColors = ['#ef4444', '#f97316', '#22c55e', '#3b82f6', '#eab308', '#8b5cf6', '#d946ef', '#ec4899'];
+            navLinks.forEach(link => {
+                link.innerHTML = link.textContent.split('').map(letter => `<span class="letter">${letter}</span>`).join('');
+                link.addEventListener('mouseenter', () => {
+                    link.style.color = navColors[Math.floor(Math.random() * navColors.length)];
+                });
+                link.addEventListener('mouseleave', () => {
+                    link.style.color = '';
+                });
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (this.classList.contains('is-animating')) return;
+                    this.classList.add('is-animating');
+                    
+                    anime.timeline({
+                        complete: () => {
+                           document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                           this.classList.remove('is-animating');
+                        }
+                    })
+                    .add({ targets: this.querySelectorAll('.letter'), translateX: () => anime.random(-15, 15), translateY: () => anime.random(-10, 10), scale: () => anime.random(0.7, 1.3), rotate: () => anime.random(-30, 30), opacity: [1, 0.5], easing: 'easeOutCirc', duration: 300 })
+                    .add({ targets: this.querySelectorAll('.letter'), translateX: 0, translateY: 0, scale: 1, rotate: 0, opacity: 1, easing: 'easeInCirc', duration: 300, delay: anime.stagger(20) });
+                });
+            });
+        }
+
+        function setupAnimations() {
+            // --- General Animations ---
+            const comicFxContainer = document.getElementById('comic-fx-container');
+            const comicFxText = document.getElementById('comic-fx-text');
+            const journeyWords = ['BAM!', 'POW!', 'WHAM!', 'ZAP!', 'KABOOM!'];
+            const workWords = ['FLIP!', 'SWOOSH!', 'REVEAL!', 'CLICK!', 'VIEW!'];
+            const secretFileWords = ['CLASSIFIED!', 'ACCESS!', 'SECRET!', 'DECODED!'];
+            const contactWords = {
+                'linkedin-link': 'CONNECT!',
+                'github-link': 'DEPLOY!',
+                'email-link': 'SEND!'
+            };
+
+            function triggerComicFX(event, type) {
+                let text;
+                if (type === 'work') text = workWords[Math.floor(Math.random() * workWords.length)];
+                else if (type === 'secret') text = secretFileWords[Math.floor(Math.random() * secretFileWords.length)];
+                else if (contactWords[type]) text = contactWords[type];
+                else text = journeyWords[Math.floor(Math.random() * journeyWords.length)];
+                
+                comicFxText.textContent = text;
+                
+                const x = event.type === 'mouseenter' ? event.currentTarget.getBoundingClientRect().left + 50 : event.clientX;
+                const y = event.type === 'mouseenter' ? event.currentTarget.getBoundingClientRect().top + 50 : event.clientY;
+
+                comicFxContainer.style.left = `${x}px`;
+                comicFxContainer.style.top = `${y}px`;
+                
+                anime.timeline({
+                    complete: () => {
+                        comicFxContainer.style.opacity = '0';
+                        comicFxContainer.style.transform = 'translate(-50%, -50%) scale(0)';
+                    }
+                })
+                .add({
+                    targets: comicFxContainer,
+                    scale: [0, 1],
+                    opacity: [0, 1],
+                    rotate: () => anime.random(-25, 25),
+                    duration: 400,
+                    easing: 'easeOutBack'
+                })
+                .add({
+                    targets: comicFxContainer,
+                    scale: 0,
+                    opacity: 0,
+                    duration: 300,
+                    easing: 'easeInBack',
+                    delay: 200
+                });
+            }
+
+            window.triggerComicFX = triggerComicFX; // Make it accessible to other setup functions
+
+            // --- Scroll-triggered Animations ---
+            let updateRects; // To be defined later for bio text
+            document.querySelectorAll('.animate-section').forEach(section => {
+                new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const animationParams = {
+                                targets: entry.target.querySelectorAll('.comic-panel:not(.card-face)'),
+                                opacity: [0, 1],
+                                scale: [0.9, 1],
+                                duration: 800,
+                                delay: anime.stagger(100)
+                            };
+                            
+                            if (entry.target.id === 'about') animationParams.complete = updateRects;
+                            if (entry.target.id === 'hobbies') animationParams.complete = setupEvidenceBoard;
+
+                            anime(animationParams);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 }).observe(section);
+            });
+            
+            document.querySelectorAll('#timeline .timeline-item').forEach(item => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const isLeft = item.classList.contains('left');
+                            anime({
+                                targets: item.querySelector('.timeline-content'),
+                                translateX: isLeft ? [-100, 0] : [100, 0],
+                                opacity: [0, 1],
+                                easing: 'easeOutExpo',
+                                duration: 800
+                            });
+                            observer.unobserve(item);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                observer.observe(item);
+            });
+
+            document.querySelectorAll('.section-divider').forEach(divider => {
+                new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            anime({
+                                targets: entry.target.querySelector('.narration-box'),
+                                scaleX: [0, 1],
+                                duration: 800,
+                                easing: 'easeOutExpo'
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.8 }).observe(divider);
+            });
+
+            // --- Interactive Elements ---
+            // Dynamic Title
+            const dynamicTitle = document.getElementById('dynamic-title');
+            const words = ['Student', 'Engineer', 'Entrepreneur', 'Builder', 'Explorer', 'Dreamer', 'Creator', 'Innovator', 'Creative', 'Storyteller', 'Superhero'];
+            let wordIndex = 0;
+            function changeWord() {
+                anime.timeline({
+                    complete: () => {
+                        wordIndex = (wordIndex + 1) % words.length;
+                        dynamicTitle.innerHTML = words[wordIndex].split('').map(c => `<span class='letter'>${c}</span>`).join('');
+                        anime({ targets: '#dynamic-title .letter', translateY: [40, 0], opacity: [0, 1], easing: 'easeOutExpo', duration: 1200, delay: anime.stagger(50) });
+                    }
+                }).add({ targets: '#dynamic-title .letter', translateY: [0, -40], opacity: [1, 0], easing: 'easeInExpo', duration: 1000, delay: anime.stagger(50, {direction: 'reverse'}) });
+            }
+            changeWord(); 
+            setInterval(changeWord, 4000);
+
+            // Bio Text Repel Effect
+            const bioContainer = document.getElementById('original-bio');
+            const paragraphs = bioContainer.querySelectorAll('p');
+            paragraphs.forEach(p => {
+                p.innerHTML = p.textContent.replace(/\S+/g, (word) => {
+                    const chars = word.split('').map(char => `<span class="char">${char}</span>`).join('');
+                    return `<span style="display: inline-block;">${chars}</span>`;
+                });
+            });
+
+            const chars = document.querySelectorAll('#original-bio .char');
+            const radius = 60;
+            let mouseX = 0, mouseY = 0;
+            let charRects = [];
+            updateRects = () => charRects = Array.from(chars).map(c => c.getBoundingClientRect());
+
+            window.addEventListener('resize', updateRects);
+            document.addEventListener('pointermove', e => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function repelAnimation() {
+                chars.forEach((char, i) => {
+                    const rect = charRects[i];
+                    if(!rect) return;
+                    const dx = (rect.left + rect.width / 2) - mouseX;
+                    const dy = (rect.top + rect.height / 2) - mouseY;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < radius) {
+                        const force = (radius - dist) / radius;
+                        const moveX = (dx / dist) * force * 20;
+                        const moveY = (dy / dist) * force * 20;
+                        char.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                    } else {
+                        char.style.transform = '';
+                    }
+                });
+                requestAnimationFrame(repelAnimation);
+            }
+            repelAnimation();
+
+            // Card Flips
+            document.querySelectorAll('.card-container').forEach(card => {
+                let isFlipped = false;
+                card.addEventListener('click', (e) => {
+                    if (document.body.classList.contains('verse-active')) return;
+                    triggerComicFX(e, 'work');
+                    isFlipped = !isFlipped;
+                    anime({ targets: card.querySelector('.card-inner'), rotateY: isFlipped ? '180deg' : '0deg', duration: 800, easing: 'easeInOutExpo' });
+                });
+            });
+
+            // "Next Issue?" Hovers
+            document.querySelectorAll('#contact a').forEach(link => {
+                link.addEventListener('mouseenter', (e) => triggerComicFX(e, link.id));
+            });
+
+            // Evidence Board
+            function setupEvidenceBoard() {
+                const svg = document.getElementById('red-strings-svg');
+                const board = document.querySelector('.evidence-board-grid');
+                if (!svg || !board) return;
+                svg.innerHTML = '';
+                const files = board.querySelectorAll('.case-file, .pinned-note');
+                if (files.length === 0) return;
+                const boardRect = board.getBoundingClientRect();
+                const centerElement = board.querySelector('.pinned-note');
+                if (!centerElement) return;
+                const centerRect = centerElement.getBoundingClientRect();
+                const centerX = (centerRect.left - boardRect.left) + (centerRect.width / 2);
+                const centerY = (centerRect.top - boardRect.top) + (centerRect.height / 2);
+
+                board.querySelectorAll('.case-file').forEach(file => {
+                    const polaroid = file.querySelector('.polaroid');
+                    const polaroidRect = polaroid.getBoundingClientRect();
+                    const startX = (polaroidRect.left - boardRect.left) + (polaroidRect.width / 2);
+                    const startY = (polaroidRect.top - boardRect.top) + (polaroidRect.height / 2);
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    line.setAttribute('x1', startX);
+                    line.setAttribute('y1', startY);
+                    line.setAttribute('x2', centerX);
+                    line.setAttribute('y2', centerY);
+                    svg.appendChild(line);
+                    file.addEventListener('mouseenter', () => {
+                        line.style.strokeWidth = '4px';
+                        line.style.filter = 'drop-shadow(0 0 5px #f87171)';
+                    });
+                    file.addEventListener('mouseleave', () => {
+                        line.style.strokeWidth = '2px';
+                        line.style.filter = 'drop-shadow(0 0 2px rgba(0,0,0,0.5))';
+                    });
+                });
+            }
+            window.addEventListener('resize', setupEvidenceBoard);
+        }
+
+        function setupModals() {
+            // Timeline Modal
+            const timelineModal = document.getElementById('timeline-modal');
+            document.querySelectorAll('#timeline .timeline-content').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.id === 'gojo-link') return;
+                    window.triggerComicFX(e, 'journey');
+                    document.getElementById('modal-image').src = card.dataset.image;
+                    timelineModal.classList.remove('hidden');
+                });
+            });
+            const closeModal = () => timelineModal.classList.add('hidden');
+            document.getElementById('modal-close-button').addEventListener('click', closeModal);
+            timelineModal.addEventListener('click', e => { if(e.target === timelineModal) closeModal(); });
+
+            // Secret File Modals
+            const secretFileModal = document.getElementById('secret-file-modal');
+            const viewSecretFileButton = document.getElementById('view-secret-file-button');
+            const closeSecretFileButton = document.getElementById('secret-file-close-button');
+            const gojoSecretFileModal = document.getElementById('gojo-secret-file-modal');
+            const gojoLink = document.getElementById('gojo-link');
+            const gojoCloseButton = document.getElementById('gojo-secret-file-close-button');
+
+            viewSecretFileButton.addEventListener('click', (e) => {
+                window.triggerComicFX(e, 'secret');
+                secretFileModal.classList.remove('hidden');
+            });
+
+            gojoLink.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.triggerComicFX(e, 'secret');
+                gojoSecretFileModal.classList.remove('hidden');
+            });
+
+            const closeSecretFile = () => secretFileModal.classList.add('hidden');
+            const closeGojoFile = () => gojoSecretFileModal.classList.add('hidden');
+            closeSecretFileButton.addEventListener('click', closeSecretFile);
+            secretFileModal.addEventListener('click', e => { if (e.target === secretFileModal) closeSecretFile(); });
+            gojoCloseButton.addEventListener('click', closeGojoFile);
+            gojoSecretFileModal.addEventListener('click', e => { if (e.target === gojoSecretFileModal) closeGojoFile(); });
+        }
+
+        function setupSkillset(createChartsFunc, chartInstances) {
+            createChartsFunc(); // Initial creation
+
+            const skillTooltip = document.getElementById('skill-tooltip');
+            const allSkills = {
+                'Problem-Solving': { level: 95, category: 'non-technical', description: 'Deconstructed complex software issues at Nike to implement robust, scalable solutions.' },
+                'Creativity': { level: 100, category: 'non-technical', description: 'Designed and developed this very portfolio from scratch to tell a compelling story.' },
+                'Leadership': { level: 90, category: 'non-technical', description: 'Mentored junior developers and students, guiding them through technical and career challenges.' },
+                'AI/ML': { level: 90, category: 'technical', description: 'Developed AI tools for Nike Global Tech, enhancing internal data processing capabilities.' },
+                'Web/Mobile App Development': { level: 90, category: 'technical', description: 'Built full-stack applications like ParkPal, utilizing the MERN stack for a seamless user experience.' },
+                'Git': { level: 95, category: 'technical', description: 'Managed complex version control workflows for team projects at NASA, ensuring code integrity.' },
+                'Project Management': { level: 85, category: 'non-technical', description: 'Led project timelines and deliverables in startup environments.' },
+                'Cross-functional communication': { level: 90, category: 'non-technical', description: 'Bridged the gap between technical and non-technical teams at NASA.' },
+                'Adaptability': { level: 95, category: 'non-technical', description: 'Thrived in fast-paced hackathon environments like ShellHacks.' },
+                'Story telling': { level: 95, category: 'non-technical', description: 'Crafted compelling narratives for projects and presentations.' },
+                'Marketing': { level: 80, category: 'non-technical', description: 'Contributed to growth strategies at the startup Konnect.' },
+                'Teamwork': { level: 85, category: 'non-technical', description: 'Collaborated effectively in diverse teams at Nike and NASA.' },
+                'Communication': { level: 90, category: 'non-technical', description: 'Presented complex technical concepts to varied audiences.' },
+                'Agile Methodology': { level: 90, category: 'non-technical', description: 'Practiced agile development cycles to deliver iterative improvements.' },
+                'Mentorship': { level: 95, category: 'non-technical', description: 'Actively guide peers in UCF clubs like SHPE, NSBE, and SWE.' },
+                'Innovation': { level: 95, category: 'non-technical', description: 'Continuously explore new technologies like VR/AR and RAG AI.' },
+                'Crime Fighting': { level: 80, category: 'non-technical', description: 'Developed the Batphone contact manager for... classified clients.' },
+                'Data Structures & Algorithms': { level: 95, category: 'technical', description: 'Passed the UCF Foundation Exam, demonstrating core CS knowledge.' },
+                'Object-Oriented Programming': { level: 95, category: 'technical', description: 'Applied OOP principles in C++, Java, and Python projects.' },
+                'Database System Management': { level: 85, category: 'technical', description: 'Managed MongoDB and SQL databases for full-stack applications.' },
+                '3D Modeling': { level: 75, category: 'technical', description: 'Created assets for personal game development projects.' },
+                'VR/AR Development': { level: 80, category: 'technical', description: 'Experimented with AR frameworks for innovative applications.' },
+                'Data Analysis': { level: 85, category: 'technical', description: 'Analyzed user data to drive feature development.' },
+                'Cryptography': { level: 70, category: 'technical', description: 'Studied encryption methods for secure application development.' },
+                'Data Mining': { level: 80, category: 'technical', description: 'Extracted insights from large datasets for research at STIR Labs.' },
+                'Web Scraping': { level: 85, category: 'technical', description: 'Built scrapers to gather real-time data for ParkPal.' },
+                'Computer Vision': { level: 80, category: 'technical', description: 'Worked on image processing tasks for personal and academic projects.' },
+                'Automation Testing': { level: 85, category: 'technical', description: 'Wrote scripts to automate testing and ensure code quality.' },
+                'Image Processing': { level: 75, category: 'technical', description: 'Applied image filters and analysis in various projects.' },
+                'UX/UI Design': { level: 80, category: 'technical', description: 'Focused on intuitive and user-friendly design in all my apps.' },
+                'Root Cause Analysis': { level: 90, category: 'technical', description: 'Excelled at debugging and identifying the source of complex issues.' },
+                'RAG AI': { level: 85, category: 'technical', description: 'Built and fine-tuned Retrieval-Augmented Generation models.' },
+                'Multi-threaded Programming': { level: 80, category: 'technical', description: 'Implemented concurrent processes to improve application performance.' },
+                'Bash/Shell Scripting': { level: 80, category: 'technical', description: 'Wrote scripts to automate tasks in Linux/UNIX environments.' },
+                'Powershell Scripting': { level: 75, category: 'technical', description: 'Automated tasks within Windows environments.' },
+                'Linux/UNIX': { level: 85, category: 'technical', description: 'Comfortable working in and managing Linux-based systems.' },
+                'API Design': { level: 90, category: 'technical', description: 'Designed and implemented RESTful APIs for web services.' },
+                'Compiler': { level: 65, category: 'technical', description: 'Studied compiler design principles at UCF.' },
+                'Cloud Computing': { level: 80, category: 'technical', description: 'Deployed and managed applications on cloud platforms.' },
+                'Programming': { level: 95, category: 'technical', description: 'Fluent in multiple languages including Python, Java, C++, and JavaScript.' },
+            };
+
+            const skillGrid = document.getElementById('skill-index-grid');
+            skillGrid.innerHTML = '';
+            Object.entries(allSkills).forEach(([skill, details]) => {
+                const item = document.createElement('div');
+                item.className = 'skill-item p-3 rounded text-center text-lg';
+                item.dataset.skill = skill;
+                item.dataset.category = details.category;
+                item.innerHTML = `<p class="mb-2">${skill}</p><div class="pip-container">${Array(10).fill(0).map((_, i) => `<div class="pip ${i*10 < details.level ? 'filled' : ''}"></div>`).join('')}</div>`;
+                
+                item.addEventListener('mouseenter', (e) => {
+                    if(allSkills[skill]?.description) {
+                        skillTooltip.textContent = allSkills[skill].description;
+                        skillTooltip.style.opacity = '1';
+                    }
+                });
+                item.addEventListener('mousemove', (e) => {
+                    skillTooltip.style.left = `${e.pageX + 15}px`;
+                    skillTooltip.style.top = `${e.pageY + 15}px`;
+                });
+                item.addEventListener('mouseleave', () => {
+                    skillTooltip.style.opacity = '0';
+                });
+
+                item.addEventListener('click', () => {
+                    const { nonTechnical: nonTechnicalChart, technical: technicalChart } = chartInstances;
+                    const skillName = item.dataset.skill;
+                    const skillData = allSkills[skillName];
+                    const isNonTechnical = skillData.category === 'non-technical';
+                    const chart = isNonTechnical ? nonTechnicalChart : technicalChart;
+                    const selClass = isNonTechnical ? 'selected-non-tech' : 'selected-tech';
+                    const idx = chart.data.labels.indexOf(skillName);
+
+                    if (idx > -1) {
+                        chart.data.labels.splice(idx, 1);
+                        chart.data.datasets[0].data.splice(idx, 1);
+                        item.classList.remove('selected-non-tech', 'selected-tech');
+                    } else {
+                        if (chart.data.labels.length >= 6) {
+                            const removedSkill = chart.data.labels.shift();
+                            chart.data.datasets[0].data.shift();
+                            const itemToRemoveClass = document.querySelector(`.skill-item[data-skill="${removedSkill}"]`);
+                            if (itemToRemoveClass) itemToRemoveClass.classList.remove('selected-non-tech', 'selected-tech');
+                        }
+                        chart.data.labels.push(skillName);
+                        chart.data.datasets[0].data.push(skillData.level);
+                        item.classList.add(selClass);
+                    }
+                    chart.update();
+                });
+
+                skillGrid.appendChild(item);
+            });
+
+            document.querySelectorAll('.filter-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    const filter = button.dataset.filter;
+                    document.querySelectorAll('.skill-item').forEach(item => {
+                        item.style.display = (filter === 'all' || filter === item.dataset.category) ? 'block' : 'none';
+                    });
+                });
+            });
+
+            // Highlight initial skills
+            chartInstances.nonTechnical.data.labels.forEach(skillName => {
+                const item = document.querySelector(`.skill-item[data-skill="${skillName}"]`);
+                if (item) item.classList.add('selected-non-tech');
+            });
+            chartInstances.technical.data.labels.forEach(skillName => {
+                const item = document.querySelector(`.skill-item[data-skill="${skillName}"]`);
+                if (item) item.classList.add('selected-tech');
+            });
+        }
+        
+        function setupVerseGlitch() {
+            const glitchButton = document.getElementById('glitch-button');
+            const glitchOverlay = document.getElementById('glitch-overlay');
+            const crackCanvas = document.getElementById('crack-canvas');
+            const crackCtx = crackCanvas.getContext('2d');
+            const digitalRainCanvas = document.createElement('canvas');
+            document.body.appendChild(digitalRainCanvas);
+            digitalRainCanvas.id = 'digital-rain-canvas';
+            const rainCtx = digitalRainCanvas.getContext('2d');
+            const glitchedTexts = document.querySelectorAll('.glitched-text');
+            const shardContainer = document.getElementById('shard-container');
+            
+            let isVerseGlitchActive = false;
+            let originalTexts = new Map();
+            let scrambleIntervalId = null;
+            let cracks = [];
+            let crackAnimationId = null;
+            let rainInterval;
+
+            const scrambleChars = '!<>-_\\/[]{}—=+*^?#________';
+            
+            function continuouslyScramble(element) {
+                if (!originalTexts.has(element)) originalTexts.set(element, element.innerHTML);
+                const originalText = element.textContent;
+                element.innerHTML = originalText.split("").map(() => scrambleChars[Math.floor(Math.random() * scrambleChars.length)]).join("");
+            }
+
+            function resolveText(element) {
+                const originalHTML = originalTexts.get(element);
+                if (!originalHTML) return;
+                let iteration = 0;
+                const interval = setInterval(() => {
+                    element.innerHTML = originalHTML.replace(/<span class="letter">(.*?)<\/span>/g, (match, letter, offset) => {
+                        const originalLetter = originalHTML.replace(/<[^>]+>/g, '')[offset / 26] || letter;
+                        return (offset / 26 < iteration) ? `<span class="letter">${originalLetter}</span>` : `<span class="letter">${scrambleChars[Math.floor(Math.random() * scrambleChars.length)]}</span>`;
+                    });
+                    if(iteration >= element.textContent.length) {
+                        clearInterval(interval);
+                        element.innerHTML = originalHTML; // Ensure it resets perfectly
+                    }
+                    iteration += element.textContent.length / 30;
+                }, 30);
+            }
+            
+            function shatterPanel(event) {
+                const panel = event.currentTarget;
+                if (!panel.classList.contains('shattered')) {
+                    panel.classList.add('shattered');
+                    anime({ targets: panel, scale: 0, rotate: anime.random(-30, 30), opacity: 0, duration: 500, easing: 'easeInBack' });
+                }
+            }
+
+            function createShardsOnClick(event) {
+                if (!isVerseGlitchActive) return;
+                const { clientX, clientY } = event;
+                for (let i = 0; i < 15; i++) {
+                    const shard = document.createElement('div');
+                    shard.classList.add('shard');
+                    const size = anime.random(2, 8);
+                    shard.style.width = `${size}px`;
+                    shard.style.height = `${size * anime.random(2,4)}px`;
+                    shard.style.left = `${clientX}px`;
+                    shard.style.top = `${clientY}px`;
+                    shardContainer.appendChild(shard);
+                    anime({ targets: shard, translateX: anime.random(-80, 80), translateY: anime.random(-80, 80), rotate: anime.random(-360, 360), scale: [1, 0], opacity: [1, 0], duration: anime.random(500, 1000), easing: 'easeOutExpo', complete: () => shard.remove() });
+                }
+            }
+            
+            function createCrack(e) {
+                for(let i=0; i<3; i++) cracks.push({ x: e.clientX, y: e.clientY, vx: Math.random() * 2 - 1, vy: Math.random() * 2 - 1, life: 100 + Math.random() * 100 });
+            }
+
+            function drawCracks() {
+                crackCtx.strokeStyle = 'rgba(127, 255, 170, 0.4)';
+                crackCtx.lineWidth = 1.5;
+                crackCtx.shadowBlur = 5;
+                crackCtx.shadowColor = 'rgba(127, 255, 170, 0.8)';
+                for(let i = cracks.length - 1; i >= 0; i--) {
+                    const c = cracks[i];
+                    crackCtx.beginPath();
+                    crackCtx.moveTo(c.x, c.y);
+                    c.x += c.vx; c.y += c.vy;
+                    c.vx += (Math.random() - 0.5) * 0.5; c.vy += (Math.random() - 0.5) * 0.5;
+                    c.vx = Math.max(-1.5, Math.min(1.5, c.vx)); c.vy = Math.max(-1.5, Math.min(1.5, c.vy));
+                    crackCtx.lineTo(c.x, c.y);
+                    crackCtx.stroke();
+                    c.life--;
+                    if (c.life <= 0) cracks.splice(i, 1);
+                }
+                crackAnimationId = requestAnimationFrame(drawCracks);
+            }
+            
+            function startDigitalRain() {
+                digitalRainCanvas.classList.add('active');
+                digitalRainCanvas.width = window.innerWidth;
+                digitalRainCanvas.height = window.innerHeight;
+                const symbols = ['Git', '{}', 'AI', 'C++', 'JS', 'RAG', '<>', 'SQL', 'UX'];
+                const fontSize = 18;
+                const columns = digitalRainCanvas.width / fontSize;
+                const drops = Array(Math.floor(columns)).fill(1);
+                function drawRain() {
+                    rainCtx.fillStyle = 'rgba(17, 24, 39, 0.1)';
+                    rainCtx.fillRect(0, 0, digitalRainCanvas.width, digitalRainCanvas.height);
+                    rainCtx.fillStyle = '#34d399';
+                    rainCtx.font = `${fontSize}px VT323`;
+                    for(let i=0; i<drops.length; i++) {
+                        const text = symbols[Math.floor(Math.random() * symbols.length)];
+                        rainCtx.fillText(text, i * fontSize, drops[i] * fontSize);
+                        if(drops[i] * fontSize > digitalRainCanvas.height && Math.random() > 0.975) drops[i] = 0;
+                        drops[i]++;
+                    }
+                }
+                if (rainInterval) clearInterval(rainInterval);
+                rainInterval = setInterval(drawRain, 40);
+                setTimeout(() => { clearInterval(rainInterval); rainInterval = null; digitalRainCanvas.classList.remove('active'); }, 3000);
+            }
+
+            glitchButton.addEventListener('click', () => {
+                isVerseGlitchActive = !isVerseGlitchActive;
+                document.body.classList.toggle('verse-active', isVerseGlitchActive);
+                const allPanels = document.querySelectorAll('.comic-panel:not(#glitch-panel-container .comic-panel)');
+                if (isVerseGlitchActive) {
+                    glitchButton.textContent = 'Stabilize Reality';
+                    glitchOverlay.classList.add('active');
+                    crackCanvas.classList.add('active');
+                    crackCanvas.width = window.innerWidth;
+                    crackCanvas.height = window.innerHeight;
+                    glitchedTexts.forEach(el => originalTexts.set(el, el.innerHTML));
+                    scrambleIntervalId = setInterval(() => glitchedTexts.forEach(el => continuouslyScramble(el)), 100);
+                    allPanels.forEach(panel => panel.addEventListener('click', shatterPanel));
+                    document.addEventListener('click', createShardsOnClick);
+                    document.addEventListener('click', createCrack);
+                    drawCracks();
+                } else {
+                    glitchButton.textContent = 'Enter the Verse';
+                    glitchOverlay.classList.remove('active');
+                    crackCanvas.classList.remove('active');
+                    cancelAnimationFrame(crackAnimationId); crackAnimationId = null;
+                    anime({ targets: cracks, life: 0, duration: 1000, easing: 'linear', update: () => { crackCtx.clearRect(0, 0, crackCanvas.width, crackCanvas.height); drawCracks(); }, complete: () => cracks = [] });
+                    startDigitalRain();
+                    clearInterval(scrambleIntervalId); scrambleIntervalId = null;
+                    glitchedTexts.forEach(el => resolveText(el));
+                    document.querySelectorAll('.comic-panel.shattered').forEach(panel => {
+                        panel.classList.remove('shattered');
+                        anime({ targets: panel, scale: 1, rotate: 0, opacity: 1, duration: 500, easing: 'easeOutBack' });
+                    });
+                    allPanels.forEach(panel => panel.removeEventListener('click', shatterPanel));
+                    document.removeEventListener('click', createShardsOnClick);
+                    document.removeEventListener('click', createCrack);
+                }
+            });
+        }
+
+        function setupBackgroundEffects() {
+            const cursorLight = document.getElementById('cursor-light');
+            document.addEventListener('mousemove', (e) => {
+                cursorLight.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(255, 255, 255, 0.08), transparent 40%)`;
+            });
+            function scheduleSubtleGlitch() {
+                if (document.body.classList.contains('verse-active')) {
+                    setTimeout(scheduleSubtleGlitch, 5000);
+                    return;
+                }
+                const delay = Math.random() * 10000 + 15000;
+                setTimeout(() => {
+                    document.body.classList.add('background-glitch');
+                    setTimeout(() => {
+                        document.body.classList.remove('background-glitch');
+                        scheduleSubtleGlitch();
+                    }, 200);
+                }, delay);
+            }
+            scheduleSubtleGlitch();
+        }
+    </script>
+</body>
 </html>
+
+
+
